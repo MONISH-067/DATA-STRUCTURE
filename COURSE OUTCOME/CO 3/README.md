@@ -15,4 +15,4 @@ Build and run: `gcc -O2 -Wall -fsanitize=address,undefined src/qX.c -o qX && ./q
 Programs write fig_q*.txt (tree data for figures); figures_data/figs.py draws them (Graphviz + matplotlib).
 Random numbers use a seeded xorshift generator, so counts are reproducible; times depend on the machine.
 Names (Q6) and words (Q7) are generated; the Q5 "given tree" is assumed (see report).
-Full report: report/CSA0307_CO3_ASSIGNMENT.pdf
+Full report: REPORT/REPORT.pdf
