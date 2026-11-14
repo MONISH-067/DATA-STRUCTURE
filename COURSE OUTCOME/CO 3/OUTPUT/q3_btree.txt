@@ -1,0 +1,73 @@
+=== 1. By hand, minimum degree t = 2 (order 4: at most 3 keys, 2..4 children): keys 10 20 5 6 12 30 7 17 ===
+insert 10:
+  splits this step: 0
+  tree:
+        [10]
+insert 20:
+  splits this step: 0
+  tree:
+        [10 20]
+insert 5:
+  splits this step: 0
+  tree:
+        [5 10 20]
+insert 6:
+    root [5 10 20] is full: new root created, 
+    split: full node [5 10 20] -> median 10 moves up, left [5], right [20]
+  splits this step: 1
+  tree:
+        [10]
+            [5 6]
+            [20]
+insert 12:
+  splits this step: 0
+  tree:
+        [10]
+            [5 6]
+            [12 20]
+insert 30:
+  splits this step: 0
+  tree:
+        [10]
+            [5 6]
+            [12 20 30]
+insert 7:
+  splits this step: 0
+  tree:
+        [10]
+            [5 6 7]
+            [12 20 30]
+insert 17:
+    split: full node [12 20 30] -> median 20 moves up, left [12], right [30]
+  splits this step: 1
+  tree:
+        [10 20]
+            [5 6 7]
+            [12 17]
+            [30]
+total splits 2, height 1 (edges), all leaves at same depth = YES, min-keys rule = OK
+
+--- search tests on this tree (node reads) ---
+search  5 -> found  , 2 node reads
+search 30 -> found  , 2 node reads
+search 17 -> found  , 2 node reads
+search  8 -> missing, 2 node reads
+
+=== 2. Height of a B-tree of order 100 holding 5,000,000 keys (formulae) ===
+order m=100: at most 99 keys and 100 children per node; at least ceil(m/2)=50 children (min degree t=50) except the root
+maximum height h (edges) for n keys: h <= log_t((n+1)/2) = log_50(2500000.5) = 3.766 -> h <= 3 (at most 4 levels = 4 disk reads)
+minimum height: n <= m^(h+1) - 1  ->  h+1 >= log_100(5000000+1) = 3.349 -> at least 4 levels
+so every search reads exactly 4 nodes at worst, i.e. height 3 edges / 4 levels; binary tree: log2(5e6) = 22.25 -> about 23 reads
+
+=== 3. Build real structures with 5,000,000 keys and simulate disk reads ===
+B-tree (t=50, random insertion order): height 3 edges = 4 levels, nodes 72868, leaves same depth = YES, min-keys = OK
+BST  (random order) height 55 edges; AVL (sorted insertion) height 22 edges
+200000 random successful searches (average / worst node visits):
+  BST    28.79 / 52   -> 287.9 ms average, 520 ms worst at 10 ms per read
+  AVL    21.33 / 23   -> 213.3 ms average, 230 ms worst
+  B-tree  3.99 / 4   -> 39.9 ms average, 40 ms worst
+--- smallest, largest and missing key (node visits) ---
+  smallest (1)       BST 14 visits, AVL 22 visits, B-tree 4 visits (found)  -> 140 ms / 220 ms / 40 ms
+  largest (5000000)  BST 16 visits, AVL 23 visits, B-tree 4 visits (found)  -> 160 ms / 230 ms / 40 ms
+  missing (5000007)  BST 16 visits, AVL 23 visits, B-tree 4 visits (not found)  -> 160 ms / 230 ms / 40 ms
+node size: B-tree node = 99 keys*4 B + 100 child refs*8 B + header = about 1204 bytes (fits a 4 KB block when 4-byte block numbers are used: 99*4+100*4+8 = 804 bytes)

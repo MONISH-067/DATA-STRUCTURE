@@ -1,0 +1,37 @@
+=== verification on 1000 words (trie vs sorted array / brute force) ===
+exact look-up, autocomplete (300 prefixes), alphabetical range (200 ranges): 2500 tests, 0 mismatches
+spell suggestions (300 mistyped words, edit distance <= 1): trie 300 / 300 and sorted array 300 / 300 identical to brute force over the 1,000 words
+example: look-up "jitosainain" -> 1; typo "jxtosainain" suggestions: jitosainain
+example: autocomplete "ji" (first 5): jiboguma jidope jigojalegi jihoyato jijubaigekaan
+example: range "bupaabotanan".."daahodaiva": 11 words (sample sorted list has 10 positions between them)
+
+=== N = 200000 words (generated, sorted, distinct), average length 9.21 letters ===
+nodes in compact trie: 783310 (3.92 nodes per word), node = 12 bytes
+structure                                         bytes bytes per word
+compact trie (child/sibling, 12 B nodes)        9399720           47.0
+26-pointer trie (216 B nodes, computed)       169194960          846.0
+sorted array of pointers + strings              3641016           18.2
+AVL tree of strings (32 B nodes + strings)        8441016           42.2
+hash table (open addressing, load 0.25-0.5)        6235320           31.2   (plus the sorted array if range/autocomplete are needed: 7835320)
+build time (random insertion order): trie 0.085 s, AVL 0.104 s, hash 0.006 s
+
+--- median response time per operation (ns), 5 timed rounds ---
+exact look-up, compact trie                                             460
+exact look-up, sorted array + binary search                             301
+exact look-up, AVL tree of strings                                      562
+exact look-up, hash table                                                49
+autocomplete, first 10 words, compact trie                              466
+autocomplete, first 10 words, sorted array (2 binary searches)          307
+autocomplete, first 10 words, AVL tree                                  553
+range listing of 50 words from a random start, compact trie            4782
+range listing of 50 words from a random start, sorted array             718
+spell suggestions (edit distance <= 1), compact trie                  27069
+spell suggestions (edit distance <= 1), sorted array + variants        46741
+spell suggestions (edit distance <= 1), hash table + variants         20361
+suggestion hit rate (original word returned among <= 64 candidates) for 400 one-edit typos: 400 / 400
+
+--- weekly update: add 2,000 new words and remove 500 old words ---
+trie: in-place insert 2000 + lazy delete 500: 0.0007 s (nodes 790486)
+sorted array: 2000 one-by-one insertions with memmove (O(n) each): 0.0335 s
+sorted array: one merge of the sorted weekly batch (O(n + k)): 0.0009 s
+hash + sorted array must do BOTH: hash insert plus the array update above (and a second copy of every pointer)

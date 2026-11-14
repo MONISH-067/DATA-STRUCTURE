@@ -1,0 +1,39 @@
+=== 1. Given tree (assumed: the brief gives none): keys inserted 8 4 12 2 6 10 14 1 3 9 11 into a plain BST ===
+initial: 8(4(2(1,3),6),12(10(9,11),14))
+access 3 (path length 4 nodes before splaying):
+      zig-zag: 3, parent 2, grandparent 4 on opposite sides -> rotate 3 twice
+      zig: 3 is a child of the root 8 -> rotate right
+    result: 3(2(1,.),8(4(.,6),12(10(9,11),14)))   root = 3, valid BST = YES
+access 9 (path length 5 nodes before splaying):
+      zig-zig: 9, parent 10, grandparent 12 on the same side -> rotate parent first, then 9
+      zig-zig: 9, parent 8, grandparent 3 on the same side -> rotate parent first, then 9
+    result: 9(8(3(2(1,.),4(.,6)),.),10(.,12(11,14)))   root = 9, valid BST = YES
+
+=== 2. 10,000 accesses per workload: 80% to 5% of the keys, uniform, and 90% to just 10 keys; n = 1,000 and 10,000 ===
+--- first ten accesses of the skewed run (n=1000): access -> root after splay ---
+    1. access  176 () -> root = 176, path length was 9
+    2. access  565 () -> root = 565, path length was 9
+    3. access  689 () -> root = 689, path length was 5
+    4. access  507 () -> root = 507, path length was 8
+    5. access  549 () -> root = 549, path length was 5
+    6. access  440 () -> root = 440, path length was 5
+    7. access  262 () -> root = 262, path length was 16
+    8. access  549 () -> root = 549, path length was 4
+    9. access  878 () -> root = 878, path length was 8
+   10. access  850 () -> root = 850, path length was 5
+n= 1000 80/20    : splay avg nodes/access   8.12  | AVL avg   7.40 | splay worst single access 27 (first access 9) | initial BST height 19 | final splay height 21 | zig 4866 zigzig 17363 zigzag 15822
+n= 1000 uniform  : splay avg nodes/access  12.47  | AVL avg   9.22 | splay worst single access 30 (first access 13) | initial BST height 19 | final splay height 23 | zig 4915 zigzig 27732 zigzag 27141
+n= 1000 90% to 10: splay avg nodes/access   4.68  | AVL avg   5.90 | splay worst single access 25 (first access 2) | initial BST height 19 | final splay height 21 | zig 4917 zigzig 8870 zigzag 7052
+n=10000 80/20    : splay avg nodes/access  12.86  | AVL avg  10.31 | splay worst single access 32 (first access 7) | initial BST height 30 | final splay height 31 | zig 4973 zigzig 28689 zigzag 28147
+n=10000 uniform  : splay avg nodes/access  17.24  | AVL avg  12.55 | splay worst single access 34 (first access 10) | initial BST height 30 | final splay height 30 | zig 4942 zigzig 39031 zigzag 39681
+n=10000 90% to 10: splay avg nodes/access   5.05  | AVL avg   5.63 | splay worst single access 30 (first access 10) | initial BST height 30 | final splay height 28 | zig 4781 zigzig 9720 zigzag 8142
+
+=== 3. Sorted access ===
+after 10000 sorted splay-insertions: height 9999 (a chain), root = 10000
+accessing 1..10000 in sorted order: first access 10000 nodes, worst 10000, total 54112 nodes = 5.41 per access (amortised O(1) here), final height 9999
+then accessing 10000..1 in reverse order: worst 2, 2.00 per access
+single worst access in the whole sorted experiment: 10000 nodes = O(n), yet the average stays small: this is amortised O(log n), not worst-case
+
+=== 4. Sequential scans and uniform random access, n = 1,000 ===
+20 sequential scans of 1,000 keys: splay 5.37 nodes/access, AVL 8.99 nodes/access
+20,000 uniform random accesses : splay 12.49 nodes/access, AVL 9.00 nodes/access (every splay access also restructures the tree: extra writes)

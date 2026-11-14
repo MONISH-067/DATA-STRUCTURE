@@ -1,0 +1,50 @@
+=== 1. Library demo: keys 500 300 700 200 400 600 800 350 ===
+preorder : 500 300 200 400 350 700 600 800 
+inorder  : 200 300 350 400 500 600 700 800 
+postorder: 200 350 400 300 600 800 700 500 
+levelord : 500 300 700 200 400 600 800 350 
+height = 3, nodes = 8
+search 350 -> found, 4 comparisons
+search 700 -> found, 2 comparisons
+search 999 -> missing, 3 comparisons
+
+=== 2. Deletion of the three cases (tree verified after each) ===
+prepare: delete 800 (case 1: leaf) -> 500 300 200 400 350 700 600 
+delete 200 (leaf): case reported = 1, nodes 7 -> 6, BST valid = YES, preorder: 500 300 400 350 700 600 | inorder: 300 350 400 500 600 700 
+delete 700 (one child): case reported = 2, nodes 6 -> 5, BST valid = YES, preorder: 500 300 400 350 600 | inorder: 300 350 400 500 600 
+delete 500 (two children): case reported = 3, nodes 5 -> 4, BST valid = YES, preorder: 600 300 400 350 | inorder: 300 350 400 600 
+
+=== 3. Empty tree and duplicate keys ===
+empty: height = -1, count = 0, search(5) = 0 (comparisons 0), delete(5) on empty -> NULL, no crash, traversal prints ''
+insert 10 three times -> returns 1,0,0; count = 1 (duplicates ignored)
+
+=== 4. 2,000 keys: random order vs sorted order ===
+random order height =   24, average comparisons (successful) =    12.97, worst = 25, verify = ok
+sorted order height = 1999, average comparisons (successful) =  1000.50, worst = 2000, verify = ok
+ratio sorted/random = 77.1; log2(2000) = 10.97, 2 ln n = 15.2
+  shuffle  1: height 23
+  shuffle  2: height 23
+  shuffle  3: height 21
+  shuffle  4: height 23
+  shuffle  5: height 25
+  shuffle  6: height 25
+  shuffle  7: height 25
+  shuffle  8: height 21
+  shuffle  9: height 26
+  shuffle 10: height 24
+  shuffle 11: height 28
+  shuffle 12: height 24
+  shuffle 13: height 22
+  shuffle 14: height 24
+  shuffle 15: height 26
+  shuffle 16: height 26
+  shuffle 17: height 22
+  shuffle 18: height 25
+  shuffle 19: height 22
+  shuffle 20: height 25
+random order, mean of 20 shuffles: height 24.0, average comparisons 13.38
+
+=== 5. Save with a traversal and rebuild ===
+original (200 keys): height 15
+rebuilt from PREORDER file : height 15, identical shape = YES
+rebuilt from INORDER file  : height 199, identical shape = NO

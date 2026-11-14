@@ -1,0 +1,28 @@
+=== 1. Six contacts: counts, nodes, memory ===
+a:5 an:4 anu:2 b:1 z:0 
+nodes (including root) = 22, memory = 22 x 216 B = 4752 B; sum of letters = 29, so sharing saved 8 nodes
+--- autocomplete verified by hand (alphabetical) ---
+prefix "an" -> 4: anand, anitha, anu, anusuya
+prefix "anu" -> 2: anu, anusuya
+prefix "" -> 6: anand, anitha, anu, anusuya, arun, bala
+prefix "anuz" -> 0: 
+prefix "anusuya" -> 1: anusuya
+prefix "b" -> 1: bala
+--- search, delete ---
+search(anu)=1 search(an)=0 search(anusuya)=1
+delete(anusuya) -> 1, nodes 22 -> 18, count(anu)=1, search(anu)=1 (still present: prefix word)
+delete(anu)     -> 1, nodes 18 -> 17, count(an)=2
+delete(missing) -> 0; delete(an) (a prefix, not a word) -> 0
+
+=== 2. Scaling: prefix search time and memory for 500, 5,000 and 50,000 names ===
+names    trie nodes trie bytes     array bytes    ratio        trie ns/query  array ns/query strncmp scan
+500      2301       497016         8056           61.7         2              194            1460          (count mismatches 0)
+5000     17692      3821472        81081          47.1         2              276            18278         (count mismatches 0)
+50000    152786     33001776       834299         39.6         3              394            372056        (count mismatches 0)
+
+=== 3. Edge cases on a 5,000-name trie ===
+empty prefix: count = 5000 (all words), autocomplete first 5: baaban baabayaala baabe baabimiyon baabunulin 
+prefix that is a whole word ("dudairin"): count = 1, autocomplete: dudairin 
+prefix with no match ("zzzq"): count = 0, autocomplete returns 0 words
+autocomplete of the whole trie returns 5000 words in strictly increasing alphabetical order = YES
+memory still allocated after destroy: 0 nodes

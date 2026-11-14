@@ -1,0 +1,40 @@
+=== 1. Hand trace: insert 10 20 30 15 25 5 (r = red, b = black) ===
+insert 10:
+      recolour 10 -> BLACK
+    result: 10b   valid = YES, black-height ok
+insert 20:
+    result: 10b(.,20r)   valid = YES, black-height ok
+insert 30:
+      case 3 (line, uncle black)
+      recolour 20 -> BLACK
+      recolour 10 -> RED
+      left rotation at 10
+    result: 20b(10r,30r)   valid = YES, black-height ok
+insert 15:
+      case 1 (uncle 30 red)
+      recolour 10 -> BLACK
+      recolour 30 -> BLACK
+      recolour 20 -> RED
+      recolour 20 -> BLACK
+    result: 20b(10b(.,15r),30b)   valid = YES, black-height ok
+insert 25:
+    result: 20b(10b(.,15r),30b(25r,.))   valid = YES, black-height ok
+insert 5:
+    result: 20b(10b(5r,15r),30b(25r,.))   valid = YES, black-height ok
+rotations 1, recolourings 7; smallest (leftmost) = 5
+
+=== 2. 10,000 random insertions then 10,000 random deletions: AVL vs red-black ===
+after 10000 insertions: RB height 16 (bound 2*log2(n+1) = 26.6), AVL height 16 (bound 1.44*log2(n+2) = 19.1)
+insertions: AVL rotations 7018 (0.702 per insertion); RB rotations 5777 (0.578 per insertion), RB recolourings 23053
+deletions : AVL rotations 3648 (0.365 per deletion); RB rotations 3769 (0.377 per deletion), RB recolourings 17636
+tree empty at the end: RB nodes 0, AVL nodes 0
+verification after every one of the 20000 operations: RB property violations = 0, AVL balance violations = 0, cached-leftmost mismatches = 0
+maximum heights seen during the run: RB 16, AVL 16
+TOTAL rotations insertion+deletion: AVL 10666, RB 9546
+
+=== 3. Mixed workload: 10,000 random insertions, then 10,000 operations (random insert or delete) ===
+4959 random inserts and 5041 random deletes on the 10,000-node trees: AVL rotations insert 4953 / delete 1566, RB rotations insert 4885 / delete 1724
+   per operation: AVL 0.652, RB 0.661; heights now RB 20, AVL 16, nodes 9918
+
+=== 4. Keys inserted in INCREASING order (1..10,000) ===
+RB height 24 (bound 26.6), AVL height 14; rotations RB 9976, AVL 9986; RB violations 0; cached minimum = 1, leftmost walk = 1
