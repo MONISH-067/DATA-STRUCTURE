@@ -1,0 +1,105 @@
+SAMPLE DATA MANIFEST
+==================================================
+Total files: 61
+Unique contents: 25
+Duplicate files: 36
+
+Content 0 (4096 bytes):
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\work\file_000.jpg
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\old\file_000_copy1.jpg
+
+Content 1 (32768 bytes):
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\downloads\file_001.docx
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\vacation\file_001_copy2.docx
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\file_001_copy1.docx
+
+Content 2 (1024 bytes):
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\old\file_002_copy2.docx
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\downloads\file_002_copy1.docx
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\reports\file_002.docx
+
+Content 4 (16384 bytes):
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\old\file_004_copy3.xlsx
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\file_004.xlsx
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\file_004_copy2.xlsx
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\file_004_copy1.xlsx
+
+Content 5 (512 bytes):
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\file_005.png
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\old\file_005_copy1.png
+
+Content 6 (512 bytes):
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\file_006_copy2.docx
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\drafts\file_006.docx
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\file_006_copy1.docx
+
+Content 8 (65536 bytes):
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\downloads\file_008_copy2.png
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\reports\file_008.png
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\file_008_copy1.png
+
+Content 9 (4096 bytes):
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\reports\file_009_copy1.txt
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\vacation\file_009.txt
+
+Content 10 (4096 bytes):
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\work\file_010_copy1.docx
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\file_010.docx
+
+Content 11 (32768 bytes):
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\old\file_011_copy2.log
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\reports\file_011_copy3.log
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\downloads\file_011_copy1.log
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\vacation\file_011.log
+
+Content 12 (512 bytes):
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\drafts\file_012.txt
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\file_012_copy2.txt
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\file_012_copy1.txt
+
+Content 13 (16384 bytes):
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\downloads\file_013_copy2.py
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\reports\file_013_copy1.py
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\file_013_copy3.py
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\vacation\file_013.py
+
+Content 14 (100 bytes):
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\file_014.pdf
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\file_014_copy1.pdf
+
+Content 16 (100 bytes):
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\downloads\file_016.jpg
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\file_016_copy3.jpg
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\drafts\file_016_copy1.jpg
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\work\file_016_copy2.jpg
+
+Content 17 (4096 bytes):
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\file_017_copy1.pdf
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\vacation\file_017.pdf
+
+Content 19 (32768 bytes):
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\file_019_copy1.png
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\file_019.png
+
+Content 20 (512 bytes):
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\work\file_020_copy1.pdf
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\file_020.pdf
+
+Content 21 (100 bytes):
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\drafts\file_021_copy1.jpg
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\reports\file_021_copy3.jpg
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\file_021_copy2.jpg
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\file_021.jpg
+
+Content 22 (100 bytes):
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\file_022.txt
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\work\file_022_copy1.txt
+
+Content 23 (65536 bytes):
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\reports\file_023.py
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\old\file_023_copy1.py
+
+Content 24 (8192 bytes):
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\file_024_copy1.docx
+  - C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\old\file_024.docx
+

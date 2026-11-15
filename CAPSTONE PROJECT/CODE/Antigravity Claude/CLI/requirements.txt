@@ -1,0 +1,4 @@
+# Duplicate File Detection System — CLI Version
+# Pure Python Standard Library (no third-party dependencies required for execution)
+# Testing dependency (optional):
+pytest>=7.0

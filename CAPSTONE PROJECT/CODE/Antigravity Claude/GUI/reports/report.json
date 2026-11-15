@@ -1,0 +1,268 @@
+{
+  "report_date": "2026-10-29T08:35:33.820262",
+  "summary": {
+    "files_scanned": 62,
+    "dirs_scanned": 10,
+    "files_skipped": 0,
+    "unique_files": 26,
+    "duplicate_files": 36,
+    "duplicate_groups": 21,
+    "wasted_bytes": 522016,
+    "wasted_human": "509.8 KB",
+    "elapsed_seconds": 0.022
+  },
+  "pipeline": {
+    "phase1_size_groups": 8,
+    "phase2_bloom_candidates": 61,
+    "phase3_quick_hash_groups": 21,
+    "phase4_full_hash_groups": 21
+  },
+  "duplicate_groups": [
+    {
+      "hash": "ef7c4f110f79b8d61aba744c626f71c9fc64aa38b275a464c21c7be6554c8042",
+      "file_size": 65536,
+      "file_size_human": "64.0 KB",
+      "copies": 3,
+      "wasted_bytes": 131072,
+      "paths": [
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\backups\\file_008_copy1.png",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\documents\\reports\\file_008.png",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\downloads\\file_008_copy2.png"
+      ]
+    },
+    {
+      "hash": "b0ca3518700e33cb34b5d77efd0cea4cc59668d07d885557a59d5f12bc8b1e6e",
+      "file_size": 32768,
+      "file_size_human": "32.0 KB",
+      "copies": 4,
+      "wasted_bytes": 98304,
+      "paths": [
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\backups\\old\\file_011_copy2.log",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\documents\\reports\\file_011_copy3.log",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\downloads\\file_011_copy1.log",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\photos\\vacation\\file_011.log"
+      ]
+    },
+    {
+      "hash": "7c459b6efe20fececc16546d7b3c9ad8ed12800f1f66cdc34b4af90bbcdd12cc",
+      "file_size": 65536,
+      "file_size_human": "64.0 KB",
+      "copies": 2,
+      "wasted_bytes": 65536,
+      "paths": [
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\backups\\old\\file_023_copy1.py",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\documents\\reports\\file_023.py"
+      ]
+    },
+    {
+      "hash": "874b4c51d02b49a318070e91a872d3184362b8f84b85c3cf1fa71924b2a722db",
+      "file_size": 32768,
+      "file_size_human": "32.0 KB",
+      "copies": 3,
+      "wasted_bytes": 65536,
+      "paths": [
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\downloads\\file_001.docx",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\photos\\file_001_copy1.docx",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\photos\\vacation\\file_001_copy2.docx"
+      ]
+    },
+    {
+      "hash": "d990513f930215475cffaf764bdab0c39aad2ef8dee2b10a357a5795350d7475",
+      "file_size": 16384,
+      "file_size_human": "16.0 KB",
+      "copies": 4,
+      "wasted_bytes": 49152,
+      "paths": [
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\backups\\file_004_copy1.xlsx",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\backups\\old\\file_004_copy3.xlsx",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\documents\\file_004_copy2.xlsx",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\photos\\file_004.xlsx"
+      ]
+    },
+    {
+      "hash": "2e1e7e1036cc7eb73b4dc93d2bb48242d227491a5b55630d1679d9438fc048b4",
+      "file_size": 16384,
+      "file_size_human": "16.0 KB",
+      "copies": 4,
+      "wasted_bytes": 49152,
+      "paths": [
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\backups\\file_013_copy3.py",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\documents\\reports\\file_013_copy1.py",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\downloads\\file_013_copy2.py",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\photos\\vacation\\file_013.py"
+      ]
+    },
+    {
+      "hash": "dfafe21a830526c31fe197a060f627110292ae2806524787a4ce50fe3c751402",
+      "file_size": 32768,
+      "file_size_human": "32.0 KB",
+      "copies": 2,
+      "wasted_bytes": 32768,
+      "paths": [
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\backups\\file_019_copy1.png",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\documents\\file_019.png"
+      ]
+    },
+    {
+      "hash": "8773dc3a2be1ed73c13730355ac4fa437d93cb7cd27df36947e23315707e774d",
+      "file_size": 8192,
+      "file_size_human": "8.0 KB",
+      "copies": 2,
+      "wasted_bytes": 8192,
+      "paths": [
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\backups\\file_024_copy1.docx",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\backups\\old\\file_024.docx"
+      ]
+    },
+    {
+      "hash": "fb154f7329ba266409087ef862a44b4d4512273b12e0d862063a2caac9aa53ec",
+      "file_size": 4096,
+      "file_size_human": "4.0 KB",
+      "copies": 2,
+      "wasted_bytes": 4096,
+      "paths": [
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\backups\\file_017_copy1.pdf",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\photos\\vacation\\file_017.pdf"
+      ]
+    },
+    {
+      "hash": "b96cee8cbbb1ed5e2de75e2bbb1805c45aeccda8c1213ac40f23cca460e35714",
+      "file_size": 4096,
+      "file_size_human": "4.0 KB",
+      "copies": 2,
+      "wasted_bytes": 4096,
+      "paths": [
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\photos\\file_010.docx",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\photos\\work\\file_010_copy1.docx"
+      ]
+    },
+    {
+      "hash": "287eda898ef0bdac727c95f8205e220732bcb1274d4730cb1724b51c20d53c68",
+      "file_size": 4096,
+      "file_size_human": "4.0 KB",
+      "copies": 2,
+      "wasted_bytes": 4096,
+      "paths": [
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\documents\\reports\\file_009_copy1.txt",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\photos\\vacation\\file_009.txt"
+      ]
+    },
+    {
+      "hash": "5ca9c40aeb0aa5d0fb300c5f3d0215bcff13cb0039968c0ac2f2c9c76cea33bf",
+      "file_size": 4096,
+      "file_size_human": "4.0 KB",
+      "copies": 2,
+      "wasted_bytes": 4096,
+      "paths": [
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\backups\\old\\file_000_copy1.jpg",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\photos\\work\\file_000.jpg"
+      ]
+    },
+    {
+      "hash": "93a2fc8cc87263fe0e204742cea41f038271cc052e19bfeae71cbc1c2a9c8642",
+      "file_size": 1024,
+      "file_size_human": "1.0 KB",
+      "copies": 3,
+      "wasted_bytes": 2048,
+      "paths": [
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\backups\\old\\file_002_copy2.docx",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\documents\\reports\\file_002.docx",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\downloads\\file_002_copy1.docx"
+      ]
+    },
+    {
+      "hash": "2f0a1148a687d7b1c5da51e34c3d28fafa2d66d9274cc882cd26f4dfbb0c5bfb",
+      "file_size": 512,
+      "file_size_human": "512 B",
+      "copies": 3,
+      "wasted_bytes": 1024,
+      "paths": [
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\backups\\file_012_copy1.txt",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\documents\\drafts\\file_012.txt",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\photos\\file_012_copy2.txt"
+      ]
+    },
+    {
+      "hash": "5221838433bbd62d9104820db2ef39d3d70397581482c550cd8feeb57fffec21",
+      "file_size": 512,
+      "file_size_human": "512 B",
+      "copies": 3,
+      "wasted_bytes": 1024,
+      "paths": [
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\documents\\drafts\\file_006.docx",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\documents\\file_006_copy1.docx",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\photos\\file_006_copy2.docx"
+      ]
+    },
+    {
+      "hash": "75465675a030e23d2dc3eb10dd0e9b9db967ee5ddf84d9ba5da4a6417d964c6b",
+      "file_size": 512,
+      "file_size_human": "512 B",
+      "copies": 2,
+      "wasted_bytes": 512,
+      "paths": [
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\backups\\file_005.png",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\backups\\old\\file_005_copy1.png"
+      ]
+    },
+    {
+      "hash": "d046b8c887279f70325a254680e2de5bf352be78361111f78941ea89609f6716",
+      "file_size": 512,
+      "file_size_human": "512 B",
+      "copies": 2,
+      "wasted_bytes": 512,
+      "paths": [
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\backups\\file_020.pdf",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\photos\\work\\file_020_copy1.pdf"
+      ]
+    },
+    {
+      "hash": "1927759285fc59c3723123c3cf447dc738f27ef0d9c2b6efb217307fb929b4f4",
+      "file_size": 100,
+      "file_size_human": "100 B",
+      "copies": 4,
+      "wasted_bytes": 300,
+      "paths": [
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\backups\\file_016_copy3.jpg",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\documents\\drafts\\file_016_copy1.jpg",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\downloads\\file_016.jpg",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\photos\\work\\file_016_copy2.jpg"
+      ]
+    },
+    {
+      "hash": "88c086073852b891012e4a46097300e3f2c887cfb4200213b4384c0e245df6f2",
+      "file_size": 100,
+      "file_size_human": "100 B",
+      "copies": 4,
+      "wasted_bytes": 300,
+      "paths": [
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\backups\\file_021.jpg",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\documents\\drafts\\file_021_copy1.jpg",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\documents\\file_021_copy2.jpg",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\documents\\reports\\file_021_copy3.jpg"
+      ]
+    },
+    {
+      "hash": "f47bcd4bcc0405a145b6dba8e79c1a94ae20039398d9c6402f805cc4fa939e8c",
+      "file_size": 100,
+      "file_size_human": "100 B",
+      "copies": 2,
+      "wasted_bytes": 100,
+      "paths": [
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\documents\\file_022.txt",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\photos\\work\\file_022_copy1.txt"
+      ]
+    },
+    {
+      "hash": "8d0da0e751fabb10a1eea543ecd3826e71e5583cf4bf457a95c389fbb310a59f",
+      "file_size": 100,
+      "file_size_human": "100 B",
+      "copies": 2,
+      "wasted_bytes": 100,
+      "paths": [
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\backups\\file_014_copy1.pdf",
+        "C:\\Users\\Monish\\.gemini\\antigravity\\scratch\\duplicate-file-detector\\tests\\sample_files\\generated\\documents\\file_014.pdf"
+      ]
+    }
+  ]
+}

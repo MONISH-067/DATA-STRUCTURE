@@ -1,0 +1,147 @@
+========================================================================
+  DUPLICATE FILE DETECTION REPORT
+  Generated: 2026-10-29 08:35:33
+========================================================================
+
+── SCAN SUMMARY ──────────────────────────────────────────
+  Files scanned       : 62
+  Directories scanned : 10
+  Files skipped       : 0
+  Unique files        : 26
+  Duplicate files     : 36
+  Duplicate groups    : 21
+  Wasted disk space   : 509.8 KB
+  Scan time           : 0.02 seconds
+  Scan errors         : 0
+
+── PIPELINE STATISTICS ───────────────────────────────────
+  Phase 1 — Size groups (≥2 files) : 8
+  Phase 2 — Bloom filter candidates : 61
+  Phase 3 — Quick-hash groups       : 21
+  Phase 4 — Full-hash groups (dupes): 21
+
+── DUPLICATE GROUPS (Top 21) ───────────────────────────
+
+  Group 1: 3 copies │ Size: 64.0 KB │ Wasted: 128.0 KB
+  Hash: ef7c4f110f79b8d61aba744c626f71c9fc64aa38b275a464c21c7be6554c8042
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\file_008_copy1.png
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\reports\file_008.png
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\downloads\file_008_copy2.png
+
+  Group 2: 4 copies │ Size: 32.0 KB │ Wasted: 96.0 KB
+  Hash: b0ca3518700e33cb34b5d77efd0cea4cc59668d07d885557a59d5f12bc8b1e6e
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\old\file_011_copy2.log
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\reports\file_011_copy3.log
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\downloads\file_011_copy1.log
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\vacation\file_011.log
+
+  Group 3: 2 copies │ Size: 64.0 KB │ Wasted: 64.0 KB
+  Hash: 7c459b6efe20fececc16546d7b3c9ad8ed12800f1f66cdc34b4af90bbcdd12cc
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\old\file_023_copy1.py
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\reports\file_023.py
+
+  Group 4: 3 copies │ Size: 32.0 KB │ Wasted: 64.0 KB
+  Hash: 874b4c51d02b49a318070e91a872d3184362b8f84b85c3cf1fa71924b2a722db
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\downloads\file_001.docx
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\file_001_copy1.docx
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\vacation\file_001_copy2.docx
+
+  Group 5: 4 copies │ Size: 16.0 KB │ Wasted: 48.0 KB
+  Hash: d990513f930215475cffaf764bdab0c39aad2ef8dee2b10a357a5795350d7475
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\file_004_copy1.xlsx
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\old\file_004_copy3.xlsx
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\file_004_copy2.xlsx
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\file_004.xlsx
+
+  Group 6: 4 copies │ Size: 16.0 KB │ Wasted: 48.0 KB
+  Hash: 2e1e7e1036cc7eb73b4dc93d2bb48242d227491a5b55630d1679d9438fc048b4
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\file_013_copy3.py
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\reports\file_013_copy1.py
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\downloads\file_013_copy2.py
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\vacation\file_013.py
+
+  Group 7: 2 copies │ Size: 32.0 KB │ Wasted: 32.0 KB
+  Hash: dfafe21a830526c31fe197a060f627110292ae2806524787a4ce50fe3c751402
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\file_019_copy1.png
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\file_019.png
+
+  Group 8: 2 copies │ Size: 8.0 KB │ Wasted: 8.0 KB
+  Hash: 8773dc3a2be1ed73c13730355ac4fa437d93cb7cd27df36947e23315707e774d
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\file_024_copy1.docx
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\old\file_024.docx
+
+  Group 9: 2 copies │ Size: 4.0 KB │ Wasted: 4.0 KB
+  Hash: fb154f7329ba266409087ef862a44b4d4512273b12e0d862063a2caac9aa53ec
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\file_017_copy1.pdf
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\vacation\file_017.pdf
+
+  Group 10: 2 copies │ Size: 4.0 KB │ Wasted: 4.0 KB
+  Hash: b96cee8cbbb1ed5e2de75e2bbb1805c45aeccda8c1213ac40f23cca460e35714
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\file_010.docx
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\work\file_010_copy1.docx
+
+  Group 11: 2 copies │ Size: 4.0 KB │ Wasted: 4.0 KB
+  Hash: 287eda898ef0bdac727c95f8205e220732bcb1274d4730cb1724b51c20d53c68
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\reports\file_009_copy1.txt
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\vacation\file_009.txt
+
+  Group 12: 2 copies │ Size: 4.0 KB │ Wasted: 4.0 KB
+  Hash: 5ca9c40aeb0aa5d0fb300c5f3d0215bcff13cb0039968c0ac2f2c9c76cea33bf
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\old\file_000_copy1.jpg
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\work\file_000.jpg
+
+  Group 13: 3 copies │ Size: 1.0 KB │ Wasted: 2.0 KB
+  Hash: 93a2fc8cc87263fe0e204742cea41f038271cc052e19bfeae71cbc1c2a9c8642
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\old\file_002_copy2.docx
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\reports\file_002.docx
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\downloads\file_002_copy1.docx
+
+  Group 14: 3 copies │ Size: 512 B │ Wasted: 1.0 KB
+  Hash: 2f0a1148a687d7b1c5da51e34c3d28fafa2d66d9274cc882cd26f4dfbb0c5bfb
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\file_012_copy1.txt
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\drafts\file_012.txt
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\file_012_copy2.txt
+
+  Group 15: 3 copies │ Size: 512 B │ Wasted: 1.0 KB
+  Hash: 5221838433bbd62d9104820db2ef39d3d70397581482c550cd8feeb57fffec21
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\drafts\file_006.docx
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\file_006_copy1.docx
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\file_006_copy2.docx
+
+  Group 16: 2 copies │ Size: 512 B │ Wasted: 512 B
+  Hash: 75465675a030e23d2dc3eb10dd0e9b9db967ee5ddf84d9ba5da4a6417d964c6b
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\file_005.png
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\old\file_005_copy1.png
+
+  Group 17: 2 copies │ Size: 512 B │ Wasted: 512 B
+  Hash: d046b8c887279f70325a254680e2de5bf352be78361111f78941ea89609f6716
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\file_020.pdf
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\work\file_020_copy1.pdf
+
+  Group 18: 4 copies │ Size: 100 B │ Wasted: 300 B
+  Hash: 1927759285fc59c3723123c3cf447dc738f27ef0d9c2b6efb217307fb929b4f4
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\file_016_copy3.jpg
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\drafts\file_016_copy1.jpg
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\downloads\file_016.jpg
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\work\file_016_copy2.jpg
+
+  Group 19: 4 copies │ Size: 100 B │ Wasted: 300 B
+  Hash: 88c086073852b891012e4a46097300e3f2c887cfb4200213b4384c0e245df6f2
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\file_021.jpg
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\drafts\file_021_copy1.jpg
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\file_021_copy2.jpg
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\reports\file_021_copy3.jpg
+
+  Group 20: 2 copies │ Size: 100 B │ Wasted: 100 B
+  Hash: f47bcd4bcc0405a145b6dba8e79c1a94ae20039398d9c6402f805cc4fa939e8c
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\file_022.txt
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\photos\work\file_022_copy1.txt
+
+  Group 21: 2 copies │ Size: 100 B │ Wasted: 100 B
+  Hash: 8d0da0e751fabb10a1eea543ecd3826e71e5583cf4bf457a95c389fbb310a59f
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\backups\file_014_copy1.pdf
+    • C:\Users\Monish\.gemini\antigravity\scratch\duplicate-file-detector\tests\sample_files\generated\documents\file_014.pdf
+
+========================================================================
+  End of report
+========================================================================
