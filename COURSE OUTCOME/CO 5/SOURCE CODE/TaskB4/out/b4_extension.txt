@@ -1,0 +1,21 @@
+== B4.1 Prim's algorithm: connect 20 hubs with fibre (cost = straight-line km x 10, rounded) ==
+cable plan (parent-hub, cost): 17-1(100) 0-2(135) 16-3(178) 19-4(58) 19-5(241) 8-6(190) 2-7(92) 1-8(179) 18-9(282) 2-10(102) 10-11(396) 18-12(392) 15-13(114) 13-14(10) 0-15(171) 15-16(72) 3-17(133) 13-18(244) 9-19(312)
+total cost = 3401  (19 cables for 20 hubs)
+cross-check with Kruskal (union-find) total = 3401 -> same cost
+
+route 10-11 (cost 396, the most expensive cable of the plan) becomes unavailable:
+new plan: 17-1(100) 0-2(135) 16-3(178) 19-4(58) 19-5(241) 8-6(190) 2-7(92) 1-8(179) 18-9(282) 2-10(102) 7-11(410) 18-12(392) 15-13(114) 13-14(10) 0-15(171) 15-16(72) 3-17(133) 13-18(244) 9-19(312)
+new total cost = 3415 (increase 14); cables that changed: hub 11 now via 7 (was 10)
+
+== B4.2 Scalability at 250,000 junctions (about 2.4 roads per junction) ==
+graph: V = 250000, undirected roads = 600000, adjacency entries = 1200000
+Dijkstra with binary heap, one full single-source search (average of 20 sources): 95.37 ms
+memory: CSR 10.1 MB + dist/prev 2.9 MB + heap array 4.0 MB (peak, 262144 entries) = 17.0 MB
+adjacency matrix for the same map: 62.5 GB at 1 byte/cell, 250 GB at 4 bytes/cell -> not possible
+Floyd-Warshall all pairs: 1.56e+16 relaxations and 250 GB for the table -> not possible (estimate at 1e9 relaxations per 0.36 s: 65 days)
+
+== Alternative concept: precomputed table between 100 major junctions ==
+precompute: 100 Dijkstra runs = 9.45 s  (budget between traffic updates: 120 s -> 7.9% of the interval, one core)
+space: distance table 100 x 100 ints = 39 KB; predecessor trees (to rebuild routes) 100 x 250000 ints = 95.4 MB
+per request: table look-up 1.3 ns  versus a fresh heap-Dijkstra search 95.37 ms (72482258x slower)
+spot check table[7][42] = 275, fresh search = 275 -> equal

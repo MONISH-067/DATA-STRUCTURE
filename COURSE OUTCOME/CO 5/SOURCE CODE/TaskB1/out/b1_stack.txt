@@ -1,0 +1,7 @@
+ulimit -s = 8192 KB
+recursive DFS on a chain of 50000 junctions: finished, max depth 50000
+recursive DFS on a chain of 200000 junctions: CRASH, exit 139 (139 = SIGSEGV, stack overflow)
+recursive DFS on a chain of 1000000 junctions: CRASH, exit 139 (139 = SIGSEGV, stack overflow)
+recursive DFS on a chain of 5000000 junctions: CRASH, exit 139 (139 = SIGSEGV, stack overflow)
+explicit-stack DFS on a chain of 50000 junctions: finished, visited 50000, max stack entries 1
+explicit-stack DFS on a chain of 5000000 junctions: finished, visited 5000000, max stack entries 1

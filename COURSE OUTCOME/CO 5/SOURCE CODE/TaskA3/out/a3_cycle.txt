@@ -1,0 +1,10 @@
+== original DAG ==
+Kahn: Lease Power Racks Staff Network Launch 
+  -> valid schedule (processed 6 of 6)
+DFS (reverse finishing order): Lease Staff Racks Power Network Launch 
+  -> valid schedule
+== with edge Launch -> Lease ==
+Kahn: 
+  -> cycle detected (processed 0 of 6)
+DFS (reverse finishing order): (back edge found, no order)
+  -> cycle detected

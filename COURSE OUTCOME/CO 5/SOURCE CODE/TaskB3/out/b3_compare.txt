@@ -1,0 +1,28 @@
+== B3.1 Correctness on a graph of 8 vertices (all-pairs distances) ==
+edges (u-v:w): 0-1:98 1-2:81 1-5:51 1-7:80 1-2:33 1-5:97 1-4:14 1-7:54 2-3:40 2-4:100 3-6:61 3-7:81 3-4:85 5-7:22
+Floyd-Warshall matrix:
+   0  98 131 171 112 149 232 152
+  98   0  33  73  14  51 134  54
+ 131  33   0  40  47  84 101  87
+ 171  73  40   0  85 103  61  81
+ 112  14  47  85   0  65 146  68
+ 149  51  84 103  65   0 164  22
+ 232 134 101  61 146 164   0 142
+ 152  54  87  81  68  22 142   0
+compared 8 x 8 = 64 distances across the three algorithms: 0 disagreement(s) -> all three agree
+
+== B3.2 Time versus size (about 3 roads per vertex, weights 1..100) ==
+V        Dijkstra array ms  Dijkstra heap ms   Floyd (all pairs) ms heap x V (all pairs) ms
+100      0.0230             0.0078             0.65                 0.78                  
+1000     1.1957             0.1108             346.18               110.80                
+10000    247.2679           1.2245             346184 (est.)        12245 (est.)          
+Floyd 10,000 is NOT run: 10^12 relaxations. Estimate = measured V=1,000 time x 1000 (cubic growth) = 346184 ms (about 0.1 hours); matrix alone = 400 MB.
+growth Floyd 100 -> 1000: x532 (cubic predicts x1000)
+'heap x V' = single-source heap time x V (all pairs by running Dijkstra from every vertex); est. at 10,000.
+
+== B3.3 A* (Manhattan heuristic) vs Dijkstra on a 500 x 500 grid, 4-neighbour moves, unit cost ==
+map                            path len  Dijkstra explored  A* explored    fewer by     time ms D / A*
+open grid, no obstacles        998       250000             63672          x3.9         9.3 / 3.0   (same length: correct)
+20% random obstacles           998       199603             73749          x2.7         13.1 / 3.9   (same length: correct)
+30% random obstacles           1004      171419             14068          x12.2        12.2 / 0.9   (same length: correct)
+vertical wall with one gap     998       205192             63894          x3.2         7.3 / 3.1   (same length: correct)

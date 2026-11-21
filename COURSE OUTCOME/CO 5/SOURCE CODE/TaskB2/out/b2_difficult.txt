@@ -1,0 +1,20 @@
+== Test 1: unreachable destination ==
+source 0 (island 3-4 not connected): 0:0 1:4 2:7 3:unreachable 4:unreachable
+destination 4 is UNREACHABLE (reported, not a distance)
+
+== Test 2: one negative edge (directed): 0->1 (4), 0->2 (5), 2->1 (-3) ==
+Dijkstra  : 0:0 1:4 2:5
+Floyd     : 0:0 1:2 2:5   (true shortest 0->1 = 5 + (-3) = 2)
+Bellman-Ford: 0:0 1:2 2:5
+Dijkstra gives 4 for junction 1 (WRONG); Floyd and Bellman-Ford give 2.
+negative-cycle check (Bellman-Ford, extra pass): graph with cycle 1->2->1 of cost -2: negative cycle DETECTED (a V-th pass still relaxes an edge)
+
+== Test 3: travel times so large that dist[u] + w overflows int ==
+int  : 2000000000 + 2000000000 = -294967296   (wrapped to a NEGATIVE time, so 'dist[u]+w < dist[v]' becomes true for the wrong reason)
+INF  : INT_MAX + 5 as int = -2147483644 (wraps negative)
+long long + INF guard: 0:0 1:2000000000 2:4000000000
+fix: (1) 64-bit distances, (2) never relax from a vertex whose dist is INF (select only dist != INF), (3) bound weights.
+
+== Test 4: topological sort on a task graph with a cycle ==
+Kahn order: 0 
+processed 1 of 4 -> cycle detected (tasks 1,2,3 never reach in-degree 0)

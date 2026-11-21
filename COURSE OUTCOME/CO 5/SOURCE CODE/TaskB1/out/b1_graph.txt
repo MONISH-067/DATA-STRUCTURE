@@ -1,0 +1,19 @@
+== B1.1 Metro network: BFS and DFS on the adjacency list (CSR) ==
+BFS: Airport Guindy Saidapet Vadapalani Central Koyambedu Egmore 
+stops from Airport: Airport=0 Guindy=1 Saidapet=2 Central=3 Egmore=4 Vadapalani=2 Koyambedu=3 
+route to Koyambedu (hand check: Airport-Guindy-Vadapalani-Koyambedu = 3 stops, the only 3-stop route; the other way, Airport-Guindy-Saidapet-Central-Egmore-Koyambedu, has 5): Koyambedu Vadapalani Guindy Airport
+DFS: Airport Guindy Saidapet Central Egmore Koyambedu Vadapalani 
+
+== B1.3 Connected regions after flooding, and cycle detection ==
+all roads open: 1 region(s), cycle: yes
+flood closes 3-4:      2 region(s) (junctions 0-3 are cut off from the rest)
+flood also closes 7-8: 3 region(s) (blocks 0-3, 4-7, 8-11)
+flood also closes 9-10: 4 region(s)  (vertices 10,11 cut off from 8,9)
+tree with 5 junctions (4 roads): cycle = no;  after adding road 3-4: cycle = yes
+
+== B1.4 BFS time and memory: adjacency matrix vs adjacency list (2.4 roads per junction) ==
+V        matrix bytes     matrix BFS ms  list bytes       list BFS ms   
+1000     1000000          0.350          42404            0.0040          (reached 1000, matrix/list time = 87x)
+10000    100000000        42.336         424004           0.1878          (reached 10000, matrix/list time = 225x)
+50000    2500000000       1138.603       2120004          1.1792          (reached 50000, matrix/list time = 966x)
+(matrix bytes = V*V at 1 byte per cell; with int cells multiply by 4. List = CSR arrays with 4-byte ints.)
