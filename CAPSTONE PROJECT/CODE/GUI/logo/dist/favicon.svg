@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256"><title>DDD Logo</title><g transform="translate(5.12 5.12) scale(7.68)">
+  <title id="title-fav">DDD Favicon</title>
+  <!-- Background Tile -->
+  <rect width="32" height="32" rx="7" fill="#0F172A"/>
+  <!-- D1 Back File (Muted) -->
+  <path fill="#64748B" fill-rule="evenodd" d="M 6 5 H 13 A 6 6 0 0 1 19 11 V 13 A 6 6 0 0 1 13 19 H 6 Z M 9 8 H 12 A 3 3 0 0 1 15 11 V 12 A 3 3 0 0 1 12 15 H 9 Z"/>
+  <!-- D2 Mid File -->
+  <path fill="#94A3B8" fill-rule="evenodd" d="M 10 9 H 17 A 6 6 0 0 1 23 15 V 17 A 6 6 0 0 1 17 23 H 10 Z M 13 12 H 16 A 3 3 0 0 1 19 15 V 16 A 3 3 0 0 1 16 19 H 13 Z"/>
+  <!-- D3 Front File (Hero Blue) -->
+  <path fill="#2563EB" fill-rule="evenodd" d="M 14 13 H 21 A 6 6 0 0 1 27 19 V 21 A 6 6 0 0 1 21 27 H 14 Z M 17 16 H 20 A 3 3 0 0 1 23 19 V 20 A 3 3 0 0 1 20 23 H 17 Z"/>
+</g></svg>

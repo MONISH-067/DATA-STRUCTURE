@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 256" width="800" height="256" role="img" aria-labelledby="title-lockup">
+  <title id="title-lockup">DDD Concentric Scanner Lockup</title>
+  <g id="symbol" transform="translate(16, 0)">
+    
+    <!-- Outer D: D1 (Data) -->
+    <path fill="#0F172A" fill-rule="evenodd" d="
+      M 40 32
+      H 64
+      A 96 96 0 0 1 160 128
+      A 96 96 0 0 1 64 224
+      H 40
+      Z
+      M 60 52
+      H 64
+      A 76 76 0 0 1 140 128
+      A 76 76 0 0 1 64 204
+      H 60
+      Z
+    "/>
+    <!-- Middle D: D2 (Duplicate) -->
+    <path fill="#0F172A" fill-rule="evenodd" d="
+      M 74 66
+      H 94
+      A 62 62 0 0 1 156 128
+      A 62 62 0 0 1 94 190
+      H 74
+      Z
+      M 94 86
+      H 94
+      A 42 42 0 0 1 136 128
+      A 42 42 0 0 1 94 170
+      H 94
+      Z
+    "/>
+    <!-- Inner D: D3 (Detection) -->
+    <path fill="#0F172A" fill-rule="evenodd" d="
+      M 108 100
+      H 124
+      A 28 28 0 0 1 152 128
+      A 28 28 0 0 1 124 156
+      H 108
+      Z
+      M 124 116
+      H 124
+      A 12 12 0 0 1 136 128
+      A 12 12 0 0 1 124 140
+      H 124
+      Z
+    "/>
+  </g>
+  </g>
+  <g id="wordmark">
+    
+  <!-- D -->
+  <path fill="#0F172A" fill-rule="evenodd" d="M 280 80 H 303 A 23 23 0 0 1 326 103 V 119 A 23 23 0 0 1 303 142 H 280 Z
+      M 292 92 H 303 A 11 11 0 0 1 314 103 V 119 A 11 11 0 0 1 303 130 H 292 Z"/>
+  <!-- D -->
+  <path fill="#0F172A" fill-rule="evenodd" d="M 338 80 H 361 A 23 23 0 0 1 384 103 V 119 A 23 23 0 0 1 361 142 H 338 Z
+      M 350 92 H 361 A 11 11 0 0 1 372 103 V 119 A 11 11 0 0 1 361 130 H 350 Z"/>
+  <!-- D -->
+  <path fill="#0F172A" fill-rule="evenodd" d="M 396 80 H 419 A 23 23 0 0 1 442 103 V 119 A 23 23 0 0 1 419 142 H 396 Z
+      M 408 92 H 419 A 11 11 0 0 1 430 103 V 119 A 11 11 0 0 1 419 130 H 408 Z"/>
+  
+  <!-- Divider Bar -->
+  <rect x="280" y="156" width="460" height="2" fill="#E2E8F0"/>
+
+    <!-- Subtitle text converted to accessible geometric lettering / paths -->
+    <g transform="translate(280, 172)">
+      <text font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" letter-spacing="2.5" fill="#64748B" text-transform="uppercase">
+        DATA STRUCTURE DUPLICATE DETECTOR
+      </text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,85 @@
+<svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="title-brand"><title>DDD Logo</title>
+  <title id="title-brand">DDD — Datastructure Duplicate file Detection</title>
+  <defs>
+    <!-- 8px knockout halo for D1 behind D2 -->
+    <mask id="halo-d1" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="256" height="256" fill="#000000" />
+      <path fill="#000000" d="
+        M 90 64
+        H 128
+        A 52 52 0 0 1 180 116
+        V 136
+        A 52 52 0 0 1 128 188
+        H 76
+        V 78
+        Z
+      "/>
+    </mask>
+    <!-- 8px knockout halo for D2 behind D3 -->
+    <mask id="halo-d2" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="256" height="256" fill="#000000" />
+      <path fill="#000000" d="
+        M 126 100
+        H 164
+        A 52 52 0 0 1 216 152
+        V 172
+        A 52 52 0 0 1 164 224
+        H 112
+        V 114
+        Z
+      "/>
+    </mask>
+  </defs>
+  <g id="symbol">
+    <!-- D1: Back duplicate copy (Muted Slate) -->
+    <path fill="#000000" fill-rule="evenodd" mask="url(#halo-d1)" d="M 62 36
+      H 92
+      A 44 44 0 0 1 136 80
+      V 104
+      A 44 44 0 0 1 92 148
+      H 48
+      V 50
+      Z
+      M 68 56
+      H 92
+      A 24 24 0 0 1 116 80
+      V 104
+      A 24 24 0 0 1 92 128
+      H 68
+      Z"/>
+    <!-- D2: Middle duplicate copy (Medium Slate) -->
+    <path fill="#000000" fill-rule="evenodd" mask="url(#halo-d2)" d="M 98 72
+      H 128
+      A 44 44 0 0 1 172 116
+      V 140
+      A 44 44 0 0 1 128 184
+      H 84
+      V 86
+      Z
+      M 104 92
+      H 128
+      A 24 24 0 0 1 152 116
+      V 140
+      A 24 24 0 0 1 128 164
+      H 104
+      Z"/>
+    <!-- D3: Front preserved original file (High-craft Brand Blue) -->
+    <path fill="#000000" fill-rule="evenodd" d="M 134 108
+      H 164
+      A 44 44 0 0 1 208 152
+      V 176
+      A 44 44 0 0 1 164 220
+      H 120
+      V 122
+      Z
+      M 140 128
+      H 164
+      A 24 24 0 0 1 188 152
+      V 176
+      A 24 24 0 0 1 164 200
+      H 140
+      Z"/>
+    <!-- Front file folded corner flap -->
+    <polygon points="120,122 134,122 134,108" fill="#000000"/>
+  </g>
+</svg>

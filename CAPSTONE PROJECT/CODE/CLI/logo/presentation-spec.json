@@ -1,0 +1,28 @@
+{
+  "brand": "DDD",
+  "tagline": "Datastructure Duplicate File Detection System",
+  "brief": "A high-performance duplicate file detection system powered by multi-phase DSA algorithms: BFS/DFS Traversal, DJB2 Hash Tables, Bloom Filters, Directory Tries, and Binary Heaps for Top-K space recovery.",
+  "adjectives": ["algorithmic", "precise", "layered", "high-performance", "dependable"],
+  "industry": "software",
+  "brand_color": "#2563EB",
+  "tile_color": "#0F172A",
+  "greyscale": false,
+  "final": true,
+  "round": 1,
+  "concepts": [
+    {
+      "name": "Layered Cascade",
+      "symbol": "ddd-symbol.svg",
+      "lockup": "ddd-horizontal.svg",
+      "stacked": "ddd-stacked.svg",
+      "avatar": "ddd-favicon.svg",
+      "idea": "Three identical D-shaped files cascading in isometric perspective, revealing redundant duplicate copies behind a preserved original file.",
+      "rationale": [
+        "Unmistakable triple D lettermark standing for Datastructure Duplicate Detection.",
+        "File chamfers and folded dog-ear corner convey document storage and file management.",
+        "Deep slate and vivid electric blue palette visually highlights the preserved canonical original."
+      ]
+    }
+  ],
+  "recommendation": "Concept B (Layered Cascade) provides the most immediate visual metaphor for duplicate file detection, scaling seamlessly from 16px favicons to high-resolution application headers."
+}

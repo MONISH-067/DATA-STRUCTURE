@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 256" width="800" height="256" role="img" aria-labelledby="title-lockup">
+  <title id="title-lockup">DDD Trie Node Lockup</title>
+  <g id="symbol" transform="translate(16, 0)">
+    
+    <!-- Arm 1 (0 deg - Top Right) -->
+    <g transform="rotate(0 128 128)">
+      <path fill="#0F172A" fill-rule="evenodd" d="
+        M 116 38
+        H 156
+        A 45 45 0 0 1 201 83
+        V 97
+        A 45 45 0 0 1 156 142
+        H 136
+        L 136 122
+        H 156
+        A 25 25 0 0 0 181 97
+        V 83
+        A 25 25 0 0 0 156 58
+        H 136
+        V 112
+        H 116
+        Z
+      "/>
+    </g>
+    <!-- Arm 2 (120 deg - Bottom Right) -->
+    <g transform="rotate(120 128 128)">
+      <path fill="#0F172A" fill-rule="evenodd" d="
+        M 116 38
+        H 156
+        A 45 45 0 0 1 201 83
+        V 97
+        A 45 45 0 0 1 156 142
+        H 136
+        L 136 122
+        H 156
+        A 25 25 0 0 0 181 97
+        V 83
+        A 25 25 0 0 0 156 58
+        H 136
+        V 112
+        H 116
+        Z
+      "/>
+    </g>
+    <!-- Arm 3 (240 deg - Left) -->
+    <g transform="rotate(240 128 128)">
+      <path fill="#0F172A" fill-rule="evenodd" d="
+        M 116 38
+        H 156
+        A 45 45 0 0 1 201 83
+        V 97
+        A 45 45 0 0 1 156 142
+        H 136
+        L 136 122
+        H 156
+        A 25 25 0 0 0 181 97
+        V 83
+        A 25 25 0 0 0 156 58
+        H 136
+        V 112
+        H 116
+        Z
+      "/>
+    </g>
+    <!-- Central Data Structure Hub (Root Node) -->
+    <circle cx="128" cy="128" r="10" fill="#0F172A"/>
+  </g>
+  </g>
+  <g id="wordmark">
+    
+  <!-- D -->
+  <path fill="#0F172A" fill-rule="evenodd" d="M 280 80 H 303 A 23 23 0 0 1 326 103 V 119 A 23 23 0 0 1 303 142 H 280 Z
+      M 292 92 H 303 A 11 11 0 0 1 314 103 V 119 A 11 11 0 0 1 303 130 H 292 Z"/>
+  <!-- D -->
+  <path fill="#0F172A" fill-rule="evenodd" d="M 338 80 H 361 A 23 23 0 0 1 384 103 V 119 A 23 23 0 0 1 361 142 H 338 Z
+      M 350 92 H 361 A 11 11 0 0 1 372 103 V 119 A 11 11 0 0 1 361 130 H 350 Z"/>
+  <!-- D -->
+  <path fill="#0F172A" fill-rule="evenodd" d="M 396 80 H 419 A 23 23 0 0 1 442 103 V 119 A 23 23 0 0 1 419 142 H 396 Z
+      M 408 92 H 419 A 11 11 0 0 1 430 103 V 119 A 11 11 0 0 1 419 130 H 408 Z"/>
+  
+  <!-- Divider Bar -->
+  <rect x="280" y="156" width="460" height="2" fill="#E2E8F0"/>
+
+    <!-- Subtitle text converted to accessible geometric lettering / paths -->
+    <g transform="translate(280, 172)">
+      <text font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" letter-spacing="2.5" fill="#64748B" text-transform="uppercase">
+        DATA STRUCTURE DUPLICATE DETECTOR
+      </text>
+    </g>
+  </g>
+</svg>

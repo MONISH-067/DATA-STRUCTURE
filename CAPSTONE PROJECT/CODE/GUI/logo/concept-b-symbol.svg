@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="title-b">
+  <title id="title-b">DDD Layered Cascade File Stack</title>
+  <defs>
+    <!-- Mask for D1 cut out by D2 + 8px separation -->
+    <mask id="cut-d1" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="256" height="256" fill="#fff" />
+      <path fill="#000" d="
+        M 86 62
+        H 126
+        A 54 54 0 0 1 180 116
+        V 140
+        A 54 54 0 0 1 126 194
+        H 72
+        V 78
+        Z
+      "/>
+    </mask>
+    <!-- Mask for D2 cut out by D3 + 8px separation -->
+    <mask id="cut-d2" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="256" height="256" fill="#fff" />
+      <path fill="#000" d="
+        M 124 96
+        H 164
+        A 54 54 0 0 1 218 150
+        V 174
+        A 54 54 0 0 1 164 228
+        H 110
+        V 112
+        Z
+      "/>
+    </mask>
+  </defs>
+  <g id="symbol">
+    <!-- D1: Back duplicate copy -->
+    <path fill="#0F172A" fill-rule="evenodd" mask="url(#cut-d1)" d="
+      M 58 36
+      H 88
+      A 46 46 0 0 1 134 82
+      V 106
+      A 46 46 0 0 1 88 152
+      H 42
+      V 52
+      Z
+      M 64 58
+      H 88
+      A 24 24 0 0 1 112 82
+      V 106
+      A 24 24 0 0 1 88 130
+      H 64
+      Z
+    "/>
+    <!-- D2: Middle duplicate copy -->
+    <path fill="#0F172A" fill-rule="evenodd" mask="url(#cut-d2)" d="
+      M 96 70
+      H 126
+      A 46 46 0 0 1 172 116
+      V 140
+      A 46 46 0 0 1 126 186
+      H 80
+      V 86
+      Z
+      M 102 92
+      H 126
+      A 24 24 0 0 1 150 116
+      V 140
+      A 24 24 0 0 1 126 164
+      H 102
+      Z
+    "/>
+    <!-- D3: Front master file with chamfer and real negative-space fold slit -->
+    <path fill="#0F172A" fill-rule="evenodd" d="
+      M 134 104
+      H 164
+      A 46 46 0 0 1 210 150
+      V 174
+      A 46 46 0 0 1 164 220
+      H 118
+      V 122
+      H 134
+      V 104
+      Z
+      M 140 126
+      H 164
+      A 24 24 0 0 1 188 150
+      V 174
+      A 24 24 0 0 1 164 198
+      H 140
+      Z
+      M 118 119
+      L 133 104
+      H 118
+      Z
+    "/>
+  </g>
+</svg>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="title-c">
+  <title id="title-c">DDD Linked Hash Chain</title>
+  <defs>
+    <!-- Weave cut: D1 cuts 6px out of D2 stem -->
+    <mask id="weave-d2" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="256" height="256" fill="#fff"/>
+      <path fill="#000" d="
+        M 30 64
+        H 58
+        A 64 64 0 0 1 104 128
+        A 64 64 0 0 1 58 192
+        H 30
+        Z
+      "/>
+    </mask>
+    <!-- Weave cut: D2 cuts 6px out of D3 stem -->
+    <mask id="weave-d3" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="256" height="256" fill="#fff"/>
+      <path fill="#000" d="
+        M 94 64
+        H 122
+        A 64 64 0 0 1 168 128
+        A 64 64 0 0 1 122 192
+        H 94
+        Z
+      "/>
+    </mask>
+  </defs>
+  <g id="symbol">
+    <!-- D1: Data Structure Base Node -->
+    <path fill="#0F172A" fill-rule="evenodd" d="
+      M 30 64
+      H 54
+      A 64 64 0 0 1 100 128
+      A 64 64 0 0 1 54 192
+      H 30
+      Z
+      M 50 84
+      H 54
+      A 44 44 0 0 1 80 128
+      A 44 44 0 0 1 54 172
+      H 50
+      Z
+    "/>
+    <!-- Node Dot in D1 counter -->
+    <circle cx="58" cy="128" r="8" fill="#0F172A"/>
+
+    <!-- D2: Duplicate Detection Node (interlocked) -->
+    <path fill="#0F172A" fill-rule="evenodd" mask="url(#weave-d2)" d="
+      M 94 64
+      H 118
+      A 64 64 0 0 1 164 128
+      A 64 64 0 0 1 118 192
+      H 94
+      Z
+      M 114 84
+      H 118
+      A 44 44 0 0 1 144 128
+      A 44 44 0 0 1 118 172
+      H 114
+      Z
+    "/>
+    <!-- Node Dot in D2 counter -->
+    <circle cx="122" cy="128" r="8" fill="#0F172A"/>
+
+    <!-- D3: Deduplicated File Node (interlocked) -->
+    <path fill="#0F172A" fill-rule="evenodd" mask="url(#weave-d3)" d="
+      M 158 64
+      H 182
+      A 64 64 0 0 1 228 128
+      A 64 64 0 0 1 182 192
+      H 158
+      Z
+      M 178 84
+      H 182
+      A 44 44 0 0 1 208 128
+      A 44 44 0 0 1 182 172
+      H 178
+      Z
+    "/>
+    <!-- Node Dot in D3 counter -->
+    <circle cx="186" cy="128" r="8" fill="#0F172A"/>
+  </g>
+</svg>

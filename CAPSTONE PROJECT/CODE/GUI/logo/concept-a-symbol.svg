@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="title-a">
+  <title id="title-a">DDD Concentric Scanner Mark</title>
+  <g id="symbol">
+    <!-- D1: Outer D (Data) -->
+    <path fill="#0F172A" fill-rule="evenodd" d="
+      M 36 32
+      H 120
+      A 96 96 0 0 1 216 128
+      A 96 96 0 0 1 120 224
+      H 36
+      Z
+      M 56 52
+      H 120
+      A 76 76 0 0 1 196 128
+      A 76 76 0 0 1 120 204
+      H 56
+      Z
+    "/>
+    <!-- D2: Middle D (Duplicate) -->
+    <path fill="#0F172A" fill-rule="evenodd" d="
+      M 70 66
+      H 120
+      A 62 62 0 0 1 182 128
+      A 62 62 0 0 1 120 190
+      H 70
+      Z
+      M 88 84
+      H 120
+      A 44 44 0 0 1 164 128
+      A 44 44 0 0 1 120 172
+      H 88
+      Z
+    "/>
+    <!-- D3: Core D (Detection) -->
+    <path fill="#0F172A" fill-rule="evenodd" d="
+      M 102 98
+      H 120
+      A 30 30 0 0 1 150 128
+      A 30 30 0 0 1 120 158
+      H 102
+      Z
+      M 118 114
+      H 120
+      A 14 14 0 0 1 134 128
+      A 14 14 0 0 1 120 142
+      H 118
+      Z
+    "/>
+  </g>
+</svg>

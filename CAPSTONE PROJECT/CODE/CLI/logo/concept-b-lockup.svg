@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 256" width="800" height="256" role="img" aria-labelledby="title-lockup">
+  <title id="title-lockup">DDD Layered Cascade Lockup</title>
+  <g id="symbol" transform="translate(16, 0)">
+    
+    <!-- Mask for D1 cut out by D2 + 8px halo -->
+    <mask id="cut-d1" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="256" height="256" fill="#fff" />
+      <!-- Subtract D2 expanded by 8px -->
+      <path fill="#000" d="
+        M 88 60
+        H 128
+        A 56 56 0 0 1 184 116
+        V 140
+        A 56 56 0 0 1 128 196
+        H 72
+        V 76
+        Z
+      "/>
+    </mask>
+    <!-- Mask for D2 cut out by D3 + 8px halo -->
+    <mask id="cut-d2" maskUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="256" height="256" fill="#fff" />
+      <!-- Subtract D3 expanded by 8px -->
+      <path fill="#000" d="
+        M 124 92
+        H 164
+        A 56 56 0 0 1 220 148
+        V 172
+        A 56 56 0 0 1 164 228
+        H 108
+        V 108
+        Z
+      "/>
+    </mask>
+  </defs>
+  <g id="symbol">
+    <!-- D1: Back duplicate file -->
+    <path fill="#0F172A" fill-rule="evenodd" mask="url(#cut-d1)" d="
+      M 60 36
+      H 92
+      A 48 48 0 0 1 140 84
+      V 108
+      A 48 48 0 0 1 92 156
+      H 44
+      V 52
+      Z
+      M 68 60
+      H 92
+      A 24 24 0 0 1 116 84
+      V 108
+      A 24 24 0 0 1 92 132
+      H 68
+      Z
+    "/>
+    <!-- D2: Middle duplicate file -->
+    <path fill="#0F172A" fill-rule="evenodd" mask="url(#cut-d2)" d="
+      M 96 68
+      H 128
+      A 48 48 0 0 1 176 116
+      V 140
+      A 48 48 0 0 1 128 188
+      H 80
+      V 84
+      Z
+      M 104 92
+      H 128
+      A 24 24 0 0 1 152 116
+      V 140
+      A 24 24 0 0 1 128 164
+      H 104
+      Z
+    "/>
+    <!-- D3: Front master file (hero) -->
+    <path fill="#0F172A" fill-rule="evenodd" d="
+      M 132 100
+      H 164
+      A 48 48 0 0 1 212 148
+      V 172
+      A 48 48 0 0 1 164 220
+      H 116
+      V 116
+      Z
+      M 140 124
+      H 164
+      A 24 24 0 0 1 188 148
+      V 172
+      A 24 24 0 0 1 164 196
+      H 140
+      Z
+    "/>
+    <!-- File Dog-Ear Fold Accent on Front File -->
+    <polygon points="116,116 132,116 132,100" fill="#0F172A"/>
+  </g>
+  </g>
+  <g id="wordmark">
+    
+  <!-- D -->
+  <path fill="#0F172A" fill-rule="evenodd" d="M 280 80 H 303 A 23 23 0 0 1 326 103 V 119 A 23 23 0 0 1 303 142 H 280 Z
+      M 292 92 H 303 A 11 11 0 0 1 314 103 V 119 A 11 11 0 0 1 303 130 H 292 Z"/>
+  <!-- D -->
+  <path fill="#0F172A" fill-rule="evenodd" d="M 338 80 H 361 A 23 23 0 0 1 384 103 V 119 A 23 23 0 0 1 361 142 H 338 Z
+      M 350 92 H 361 A 11 11 0 0 1 372 103 V 119 A 11 11 0 0 1 361 130 H 350 Z"/>
+  <!-- D -->
+  <path fill="#0F172A" fill-rule="evenodd" d="M 396 80 H 419 A 23 23 0 0 1 442 103 V 119 A 23 23 0 0 1 419 142 H 396 Z
+      M 408 92 H 419 A 11 11 0 0 1 430 103 V 119 A 11 11 0 0 1 419 130 H 408 Z"/>
+  
+  <!-- Divider Bar -->
+  <rect x="280" y="156" width="460" height="2" fill="#E2E8F0"/>
+
+    <!-- Subtitle text converted to accessible geometric lettering / paths -->
+    <g transform="translate(280, 172)">
+      <text font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" letter-spacing="2.5" fill="#64748B" text-transform="uppercase">
+        DATA STRUCTURE DUPLICATE DETECTOR
+      </text>
+    </g>
+  </g>
+</svg>
