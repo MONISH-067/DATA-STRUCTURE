@@ -1,0 +1,147 @@
+TASK 6 – TRACES (order 4: at most 3 keys per node; 15 keys inserted in the order shown)
+keys: [13, 7, 25, 4, 19, 11, 30, 3, 22, 17, 8, 28, 2, 15, 26]
+
+-- B-tree (keys stored in internal nodes too) --
+insert 13: no split
+insert  7: no split
+insert 25: no split
+insert  4: split node [7, 13, 25] -> [7] | 13 up | [25]; root full: new root, height +1
+insert 19: no split
+insert 11: no split
+insert 30: no split
+insert  3: split node [4, 7, 11] -> [4] | 7 up | [11]
+insert 22: split node [19, 25, 30] -> [19] | 25 up | [30]
+insert 17: split node [7, 13, 25] -> [7] | 13 up | [25]; root full: new root, height +1
+insert  8: no split
+insert 28: no split
+insert  2: no split
+insert 15: split node [17, 19, 22] -> [17] | 19 up | [22]
+insert 26: no split
+final B-tree:
+[13]
+  [7]
+    [2, 3, 4]
+    [8, 11]
+  [19, 25]
+    [15, 17]
+    [22]
+    [26, 28, 30]
+
+-- B+ tree (leaf capacity 3, fan-out 4; keys copied up, all records in leaves) --
+insert 13: no split
+insert  7: no split
+insert 25: no split
+insert  4: split leaf: 4..7 | 13..25; separator 13; root split: new root, height now 2
+insert 19: no split
+insert 11: no split
+insert 30: split leaf: 13..19 | 25..30; separator 25
+insert  3: split leaf: 3..4 | 7..11; separator 7
+insert 22: no split
+insert 17: split leaf: 13..17 | 19..22; separator 19; split internal node; key 13 moves up; root split: new root, height now 3
+insert  8: no split
+insert 28: no split
+insert  2: no split
+insert 15: no split
+insert 26: split leaf: 25..26 | 28..30; separator 28
+final B+ tree:
+node sep [13]
+  node sep [7]
+    leaf [2, 3, 4]
+    leaf [7, 8, 11]
+  node sep [19, 25, 28]
+    leaf [13, 15, 17]
+    leaf [19, 22]
+    leaf [25, 26]
+    leaf [28, 30]
+leaf chain: [2, 3, 4] -> [7, 8, 11] -> [13, 15, 17] -> [19, 22] -> [25, 26] -> [28, 30]
+
+-- deletions from the B+ tree: [25, 4, 19, 3] (min leaf 2 keys, min children 2) --
+delete 25: merge leaves; separator removed from parent | height 3
+node sep [13]
+  node sep [7]
+    leaf [2, 3, 4]
+    leaf [7, 8, 11]
+  node sep [19, 28]
+    leaf [13, 15, 17]
+    leaf [19, 22, 26]
+    leaf [28, 30]
+
+delete  4: no underflow | height 3
+node sep [13]
+  node sep [7]
+    leaf [2, 3]
+    leaf [7, 8, 11]
+  node sep [19, 28]
+    leaf [13, 15, 17]
+    leaf [19, 22, 26]
+    leaf [28, 30]
+
+delete 19: no underflow | height 3
+node sep [13]
+  node sep [7]
+    leaf [2, 3]
+    leaf [7, 8, 11]
+  node sep [19, 28]
+    leaf [13, 15, 17]
+    leaf [22, 26]
+    leaf [28, 30]
+
+delete  3: redistribute from right sibling: separator becomes 8 | height 3
+node sep [13]
+  node sep [8]
+    leaf [2, 7]
+    leaf [8, 11]
+  node sep [19, 28]
+    leaf [13, 15, 17]
+    leaf [22, 26]
+    leaf [28, 30]
+
+tree after deletions verified: keys in order, separators valid, all leaves at equal depth.
+
+TASK 6 – CAPACITY AT 69% FILL
+B+ tree: leaf capacity 255 entries, fan-out 293; at 69%: 175 records per leaf, 202 children per inner node
+  2 levels: 35,350 records
+  3 levels: 7,140,700 records
+  4 levels: 1,442,421,400 records
+B-tree: order p = floor((4096+16)/22) = 186; at 69%: 127 keys per node, 128 children
+  2 levels: 16,383 records (keys in all nodes)
+  3 levels: 2,097,151 records (keys in all nodes)
+  4 levels: 268,435,455 records (keys in all nodes)
+
+TASK 7 – HASHING
+static hash, bucket cap 256, load 0.5: expected overflow blocks per bucket = 0.0000; expected blocks per successful search ≈ 1.000
+static hash, bucket cap 256, load 0.7: expected overflow blocks per bucket = 0.0000; expected blocks per successful search ≈ 1.000
+static hash, bucket cap 256, load 0.9: expected overflow blocks per bucket = 0.0446; expected blocks per successful search ≈ 1.045
+static hash, bucket cap 256, load 0.95: expected overflow blocks per bucket = 0.1960; expected blocks per successful search ≈ 1.196
+
+Extendible hashing trace (keys used as 8-bit hash values, bucket capacity 2)
+insert  2 (hash 00000010): fits in bucket
+insert  3 (hash 00000011): fits in bucket
+insert  5 (hash 00000101): directory doubles to 2 entries (global depth 1); split bucket: local depth 1
+insert  7 (hash 00000111): directory doubles to 4 entries (global depth 2); split bucket: local depth 2
+insert 11 (hash 00001011): directory doubles to 8 entries (global depth 3); split bucket: local depth 3
+insert 13 (hash 00001101): fits in bucket
+insert  4 (hash 00000100): fits in bucket
+insert 10 (hash 00001010): split bucket: local depth 2
+  global depth 3, directory 8 entries
+    dir[000] -> bucket 0 (local depth 2) [4]
+    dir[001] -> bucket 1 (local depth 2) [5, 13]
+    dir[010] -> bucket 2 (local depth 2) [2, 10]
+    dir[011] -> bucket 3 (local depth 3) [3, 11]
+    dir[100] -> bucket 0 (local depth 2) [4]
+    dir[101] -> bucket 1 (local depth 2) [5, 13]
+    dir[110] -> bucket 2 (local depth 2) [2, 10]
+    dir[111] -> bucket 4 (local depth 3) [7]
+
+Linear hashing trace (M0 = 2 buckets, capacity 2, split when load factor > 0.75)
+insert  4: no split  | level 0, p 0, buckets [[4], []]
+insert  8: no split  | level 0, p 0, buckets [[4, 8], []]
+insert 12: no split  | level 0, p 0, buckets [[4, 8, 12], []]
+insert  1: split bucket 0 (keys [4, 8, 12]) -> bucket 0 [4, 8, 12] and new bucket 2 []; split pointer 1, level 0  | level 0, p 1, buckets [[4, 8, 12], [1], []]
+insert  5: split bucket 1 (keys [1, 5]) -> bucket 1 [1, 5] and new bucket 3 []; split pointer 0, level 1  | level 1, p 0, buckets [[4, 8, 12], [1, 5], [], []]
+insert  9: no split  | level 1, p 0, buckets [[4, 8, 12], [1, 5, 9], [], []]
+insert  2: split bucket 0 (keys [4, 8, 12]) -> bucket 0 [8] and new bucket 4 [4, 12]; split pointer 1, level 1  | level 1, p 1, buckets [[8], [1, 5, 9], [2], [], [4, 12]]
+insert  6: split bucket 1 (keys [1, 5, 9]) -> bucket 1 [1, 9] and new bucket 5 [5]; split pointer 2, level 1  | level 1, p 2, buckets [[8], [1, 9], [2, 6], [], [4, 12], [5]]
+hash function used: h_level(k) = k mod (2^level * M0); addresses below the split pointer use level+1.
+
+Expected costs (equality search on TxnID): static 1+overflow; extendible 1 bucket read (+directory in memory); linear 1 to 2 bucket reads; range search: not supported.

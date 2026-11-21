@@ -1,0 +1,206 @@
+{
+ "N": 1000,
+ "workload": "orig",
+ "blocks": 50,
+ "bfr": 20,
+ "params": {
+  "leaf_cap_txn": 255,
+  "fanout_txn": 293,
+  "leaf_cap_acc": 204,
+  "fanout_acc": 228,
+  "leaf_cap_br": 146,
+  "fanout_br": 158,
+  "eh_bucket_cap": 256,
+  "static_M": 6,
+  "stepms": 4320,
+  "accounts": 20,
+  "branches": 20,
+  "static_M95": 5
+ },
+ "build": {
+  "bt_txn": {
+   "seconds": 0.00036215782165527344,
+   "reads": 1744,
+   "writes": 1018
+  },
+  "bt_acc": {
+   "seconds": 0.00047326087951660156,
+   "reads": 1795,
+   "writes": 1018
+  },
+  "bt_br": {
+   "seconds": 0.0004830360412597656,
+   "reads": 1853,
+   "writes": 1024
+  },
+  "eh": {
+   "seconds": 0.0014314651489257812,
+   "writes": 1010,
+   "reads": 1000,
+   "splits": 5,
+   "doublings": 3
+  }
+ },
+ "sizes": {
+  "heap_bytes": 204800,
+  "sorted_bytes": 204800,
+  "bt_txn_bytes": 32768,
+  "bt_txn_height": 2,
+  "bt_txn_leaves": 7,
+  "bt_txn_inner": 1,
+  "bt_txn_util": 0.5602240896358543,
+  "sp_time_bytes": 4096,
+  "sp_time_height": 1,
+  "bt_acc_bytes": 32768,
+  "bt_acc_height": 2,
+  "bt_acc_util": 0.7002801120448179,
+  "bt_br_bytes": 40960,
+  "bt_br_height": 2,
+  "bt_br_util": 0.76103500761035,
+  "eh_bytes": 24640,
+  "eh_dir_entries": 8,
+  "eh_global_depth": 3,
+  "eh_util": 0.6510416666666666,
+  "eh_buckets": 6,
+  "sh_bytes": 24576,
+  "sh_overflow_blocks": 0,
+  "sh_buckets": 6,
+  "sh95_overflow_blocks": 0,
+  "sh95_buckets": 5,
+  "sh95_bytes": 20480,
+  "sh95_longest_chain": 1
+ },
+ "eq_txn": {
+  "H": {
+   "reads": 24.48
+  },
+  "S": {
+   "reads": 4.925
+  },
+  "BT": {
+   "reads": 3.0,
+   "correct": true
+  },
+  "EH": {
+   "reads": 2.0,
+   "correct": true
+  },
+  "SH": {
+   "reads": 2.0,
+   "correct": true
+  },
+  "SH95": {
+   "reads": 2.0,
+   "correct": true
+  }
+ },
+ "ms_eq_txn": 0.01393875500014019,
+ "range_txn": {
+  "H": {
+   "reads": 50.0
+  },
+  "S": {
+   "reads": 54.0
+  },
+  "BT": {
+   "reads": 58.0,
+   "correct": true
+  },
+  "EH": {
+   "reads": 50,
+   "note": "hash: no range support, falls back to full scan"
+  },
+  "SH": {
+   "reads": 6,
+   "note": "hash: no range support, full scan"
+  }
+ },
+ "ms_range_txn": 0.1007528499997079,
+ "time_window": {
+  "sparse_time_index": {
+   "reads": 51.0
+  },
+  "heap_scan": {
+   "reads": 50.0
+  }
+ },
+ "secondary": {
+  "acc_index": {
+   "reads": 34.09,
+   "rows": 50.4,
+   "correct": true
+  },
+  "acc_scan": {
+   "reads": 50,
+   "note": "no index: whole heap"
+  },
+  "br_index": {
+   "reads": 34.5,
+   "correct": true
+  },
+  "br_scan": {
+   "reads": 50
+  }
+ },
+ "ms_secondary": 0.011592190908645121,
+ "insert": {
+  "H": {
+   "reads": 100,
+   "writes": 105
+  },
+  "S": {
+   "reads": 100,
+   "writes": 100
+  },
+  "BT": {
+   "reads": 2.0,
+   "writes": 2.03,
+   "splits_leaves": 1
+  },
+  "EH": {
+   "reads": 1.0,
+   "writes": 2.02,
+   "splits": 1,
+   "doublings": 0
+  },
+  "acc_index_insert": {
+   "reads": 2.0,
+   "writes": 1.0
+  },
+  "br_index_insert": {
+   "reads": 2.0,
+   "writes": 1.06
+  }
+ },
+ "ms_insert": 0.004303660000459786,
+ "delete": {
+  "H": {
+   "reads": 24.01,
+   "writes": 1
+  },
+  "S": {
+   "reads": 31.75,
+   "writes": 26.99,
+   "note": "locate, then rewrite every later block to close the gap"
+  },
+  "BT": {
+   "reads": 2.35,
+   "writes": 1.51,
+   "correct": true,
+   "merges_or_redists_note": "counted in tree"
+  },
+  "EH": {
+   "reads": 1,
+   "writes": 1,
+   "note": "bucket locate + write, no merging"
+  },
+  "SH": {
+   "reads": 1,
+   "writes": 1,
+   "note": "bucket locate + write"
+  }
+ },
+ "ms_delete": 0.006148389999793835,
+ "check_bt_txn": true,
+ "wall_seconds": 0.01145315170288086
+}

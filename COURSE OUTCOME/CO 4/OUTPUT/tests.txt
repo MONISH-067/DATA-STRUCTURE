@@ -1,0 +1,25 @@
+PASS  [increasing] equality on TxnID: B+ tree, extendible and static hash return the right record (2,000 probes)
+PASS  [increasing] range of 2,000 TxnIDs (50 ranges) equals brute force
+PASS  [increasing] duplicate keys: AccountNo index returns every matching row (50 accounts)
+PASS  [increasing] duplicate keys: Branch index returns every row for all 20 branches
+PASS  [increasing] 8,000 deletions with redistribution/merging keep the tree valid and correct
+PASS  [random 64-bit] equality on TxnID: B+ tree, extendible and static hash return the right record (2,000 probes)
+PASS  [random 64-bit] range of 2,000 TxnIDs (50 ranges) equals brute force
+PASS  [random 64-bit] duplicate keys: AccountNo index returns every matching row (50 accounts)
+PASS  [random 64-bit] duplicate keys: Branch index returns every row for all 20 branches
+PASS  [random 64-bit] 8,000 deletions with redistribution/merging keep the tree valid and correct
+PASS  empty B+ tree: equality returns nothing with one block read (root leaf)
+PASS  empty B+ tree: range returns nothing
+PASS  empty B+ tree: delete of a missing key returns False
+PASS  empty extendible hash: lookup returns nothing
+PASS  empty static hash: lookup returns nothing
+PASS  empty heap: a scan of zero blocks returns nothing
+PASS  delete the last key: tree becomes empty and still valid
+PASS  insert after emptying the tree works
+PASS  30 duplicate keys in one index: all 30 returned
+PASS  delete all duplicates one by one: index empty, height 1
+PASS  extendible hash, 5 identical keys: all kept (overflow block), directory stays small
+PASS  static hash: overflow chain holds all 7 records in 4 blocks
+PASS  static hash on an empty file: search costs 1 block read
+
+all tests passed
